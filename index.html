@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- {% compress css %}
+        <link type="text/x-scss" href="{% static 'index.scss' %}" rel="stylesheet" media="screen">
+    {% endcompress %}  -->
+
+    <!-- {% comment %} <link href="{% static 'index.css' %}" rel="stylesheet" type="text/css" /> {% endcomment %} -->
+
+    <link rel='icon' href="logo.png" type='image/x-icon' />
+    <!-- <link rel="stylesheet" href="{% static 'style.css' %}"> {% endcomment %} -->
+    <title>
+        John Mulligan's Homepage
+    </title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary d-flex" aria-label="navbar" id="Navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand p-0 ps-2" href="/"><img src="logo.png" style="height: 40px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontent"
+                aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarcontent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div id="content" style="margin-left: 10px; margin-top: 8px;">
+        <!-- Create a basic page containing:
+
+    A paragraph about yourself (what High School you attended and so forth), what are your hobbies etc...
+    A photograph of your favorite food.
+    A link to the RIT SE website.
+    A few bullet points about what you'd like to learn from the course. -->
+
+    <!-- Make sure to use Bootstrap CSS Classes -->
+        <h1>John Mulligan's Homepage</h1>
+
+        <h2>About Me</h2>
+        <p>Hi there
+            I am John Mulligan, a student at RIT studying Software Engineering. I attended University of Chicago Laboratory Schools from Kindergarden until 12th Grade.
+            I enjoy playing video games, making programs, and spending time with friends and family.
+            I've been programming for about 5 years now, and I look forward to learning more about software development during my time at RIT.
+        </p>
+
+        <h2>Favorite Food</h2>
+        <img src="https://www.pressurecookrecipes.com/wp-content/uploads/2022/12/instant-pot-mac-and-cheese.jpg" alt="Mac and Cheese (My Favorite Food)"
+            style="width:300px;height:200px;">
+
+        <h2>Link to <a href="https://se.rit.edu">RIT SE website</a></h2>
+
+        <h2>What I Want to Review</h2>
+        <h6>I've already done SE courses so most of the content in this course is review.</h6>
+        <ul>
+            <li>Web Development</li>
+            <li>Teamwork</li>
+            <li>Communication</li>
+            <li>Passing grade</li> <!-- This is very important -->
+        </ul>
+
+    </div>
+
+    <script>
+        let tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (!tz) {
+            tz = "UTC"
+        }
+        document.cookie = "mytz=" + tz + ";path=/";
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
